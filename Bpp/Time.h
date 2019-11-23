@@ -1,4 +1,5 @@
 #pragma once
+#include <ostream>
 class Time
 {
 public:
@@ -10,7 +11,8 @@ public:
 	bool greatEquals	(Time const& x) const;
 	
 	// Display function
-	void display() ;
+	void display();
+	void display(std::ostream& out);
 
 	// Operateur De Calcule with "="
 	Time operator+=(Time const& x);
@@ -36,6 +38,7 @@ bool operator>=(Time const& x, Time const& y);
 // Operateur De Calcule without "="
 Time operator+(Time const& x, Time const& y);
 
+std::ostream& operator<<(std::ostream& flux, Time time);
 
 /* Time operator-(Time const& x);
  * Time operator*(Time const& x);

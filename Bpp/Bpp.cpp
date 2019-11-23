@@ -7,9 +7,9 @@ int main()
 {
 	Time one(34, 54, 55), two(46, 95, 54), add(one + two);
 
-	cout << "Time One: "; one.display();
-	cout << "Time Two: "; two.display();
-	cout << "Time One + Time Two: "; add.display();
+	cout << "Time One: " << one; 
+	cout << "Time Two: " << two; 
+	cout << "Time One + Time Two: " << add;
 	cout << endl;
 
 	if (one > two)

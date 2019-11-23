@@ -97,6 +97,15 @@ void Time::display()
 
 	std::cout << m_hours << "H " << m_min << "Min " << m_sec << " Sec" << std::endl;
 }
+void Time::display(std::ostream &out) {
+	m_hours += m_min / 60;
+	m_min %= 60;
+
+	m_min += m_sec / 60;
+	m_sec %= 60;
+
+	std::cout << m_hours << "H " << m_min << "Min " << m_sec << " Sec" << std::endl;
+}
 
 // Operator +=
 Time Time::operator+=(Time const& x)
@@ -124,6 +133,11 @@ Time operator+(Time const& x, Time const& y)
 	 Time X(x);
 	 X += y;
 	 return X;
+}
+
+std::ostream& operator<<(std::ostream& flux, Time time) {
+	time.display(flux);
+	return flux;
 }
 
 
