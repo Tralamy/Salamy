@@ -1,16 +1,30 @@
 #include <iostream>
+#include <cstdlib>
 #include "Time.h"
+using namespace std;
 
 int main()
 {
-	Time one(0, 10, 21), two(0, 10, 28);
+	Time one(34, 54, 55), two(46, 95, 54), add(one + two);
 
-	if (one <= two) {
-		std::cout << "Duree1 is larger";
+	cout << "Time One: "; one.display();
+	cout << "Time Two: "; two.display();
+	cout << "Time One + Time Two: "; add.display();
+	cout << endl;
+
+	if (one > two)
+	{
+		cout << "One is greater than two !" << endl;
 	}
-	else {
-		std::cout << "Duree1 is not larger";
+	else if(one == two)
+	{
+		cout << "One equals Two";
+	}
+	else
+	{
+		cout << "Two is greater that One" << endl;
 	}
 
+	system("pause");
 	return 0;
 }

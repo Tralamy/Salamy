@@ -1,4 +1,5 @@
 #include "Time.h"
+#include <iostream>
 // CLASS
 Time::Time(int heures, int minutes, int secondes) : m_hours(heures), m_min(minutes), m_sec(secondes) {}
 
@@ -85,4 +86,83 @@ bool Time::greatEquals(Time const& x) const {
 	}
 }
 
+// Display function
+void Time::display()
+{
+	m_hours += m_min / 60;
+	m_min %= 60;
+
+	m_min += m_sec / 60;
+	m_sec %= 60;
+
+	std::cout << m_hours << "H " << m_min << "Min " << m_sec << " Sec" << std::endl;
+}
+
+// Operator +=
+Time Time::operator+=(Time const& x)
+{
+	// Sec
+	m_sec += x.m_sec;
+	m_min += m_sec / 60;
+	m_sec %= 60;
+
+	// Min
+	m_min += x.m_min;
+	m_hours += m_min / 60;
+	m_min %= 60;
+
+	// Hours
+	m_hours += x.m_hours;
+
+	return *this;
+
+}
+
+// Operator +
+Time operator+(Time const& x, Time const& y)
+{
+	 Time X(x);
+	 X += y;
+	 return X;
+}
+
+
+
+
+/*
+// Operator -=
+Time Time::operator-=(Time const& x)
+{
+	return Time();
+}
+
+// Operator *=
+Time Time::operator*=(Time const& x)
+{
+	return Time();
+}
+
+// Operator /=
+Time Time::operator/=(Time const& x)
+{
+	return Time();
+}
+
+
+
+Time Time::operator-(Time const& x)
+{
+	return Time();
+}
+
+Time Time::operator*(Time const& x)
+{
+	return Time();
+}
+
+Time Time::operator/(Time const& x)
+{
+	return Time();
+}
+*/
 

@@ -7,6 +7,7 @@ ET des cout pour les PV ETC !
 #include <string>
 #include <stdlib.h> 
 #include "Personnage.h"
+#include <cstdlib>
 
 using namespace std;
 
@@ -36,7 +37,6 @@ int main()
 	cout << "Elyas ->" << endl;
 	Elyas.afficherEtat();
 
-
-
+	system("pause");
 	return 0;
 }
