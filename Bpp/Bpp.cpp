@@ -1,7 +1,16 @@
 #include <iostream>
-#include "Duree.h"
+#include "Time.h"
 
 int main()
 {
-	Duree One(0, 10, 28), Two(0, 15, 2);
+	Time one(0, 10, 21), two(0, 10, 28);
+
+	if (one <= two) {
+		std::cout << "Duree1 is larger";
+	}
+	else {
+		std::cout << "Duree1 is not larger";
+	}
+
+	return 0;
 }

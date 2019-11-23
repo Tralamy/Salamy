@@ -18,12 +18,12 @@
     <ClCompile Include="..\..\..\..\..\OneDrive - Commission scolaire de la Pointe-de-l%27Ile\MyProject\Dev\C++\Bpp\Bpp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\OneDrive - Commission scolaire de la Pointe-de-l%27Ile\MyProject\Dev\C++\Bpp\Duree.cpp">
+    <ClCompile Include="Time.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\OneDrive - Commission scolaire de la Pointe-de-l%27Ile\MyProject\Dev\C++\Bpp\Duree.h">
+    <ClInclude Include="Time.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

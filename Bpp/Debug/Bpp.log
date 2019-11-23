@@ -1,4 +1,7 @@
 ﻿  Bpp.cpp
-  Duree.cpp
+C:\Users\rahma\OneDrive - Commission scolaire de la Pointe-de-l'Ile\MyProject\Dev\C++\Bpp\Bpp.cpp(6,2): error C2065: 'Duree': undeclared identifier
+C:\Users\rahma\OneDrive - Commission scolaire de la Pointe-de-l'Ile\MyProject\Dev\C++\Bpp\Bpp.cpp(8,2): error C2143: syntax error: missing ';' before 'if'
+C:\Users\rahma\OneDrive - Commission scolaire de la Pointe-de-l'Ile\MyProject\Dev\C++\Bpp\Bpp.cpp(8,6): error C2065: 'duree1': undeclared identifier
+  Time.cpp
   Generating Code...
-  Bpp.vcxproj -> C:\Users\rahma\OneDrive - Commission scolaire de la Pointe-de-l'Ile\MyProject\Dev\C++\Bpp\Debug\Bpp.exe
+C:\Users\rahma\OneDrive - Commission scolaire de la Pointe-de-l'Ile\MyProject\Dev\C++\Bpp\Bpp.cpp(8,16): error C2065: 'duree2': undeclared identifier
