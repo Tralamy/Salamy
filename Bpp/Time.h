@@ -16,9 +16,7 @@ public:
 
 	// Operateur De Calcule with "="
 	Time operator+=(Time const& x);
-	 /* Time operator-=(Time const& x);
-	  * Time operator*=(Time const& x);
-	  * Time operator/=(Time const& x); */
+	Time operator-=(Time const& x);
 
 
 
@@ -37,9 +35,8 @@ bool operator>=(Time const& x, Time const& y);
 
 // Operateur De Calcule without "="
 Time operator+(Time const& x, Time const& y);
+Time operator-(Time const& x, Time const& y);
 
+// Add to ostream
 std::ostream& operator<<(std::ostream& flux, Time time);
 
-/* Time operator-(Time const& x);
- * Time operator*(Time const& x);
- * Time operator/(Time const& x); */ 
