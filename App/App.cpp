@@ -37,6 +37,6 @@ int main()
 	cout << "Elyas ->" << endl;
 	Elyas.afficherEtat();
 
-	system("pause");
+
 	return 0;
 }
