@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-	Time one(34, 54, 55), two(46, 95, 54), add(one + two);
+	Time one(0, 12), two(0, 11), add(one + two);
 	Time Three(0,10);
 
 	cout << "Time One: " << one; 

@@ -107,6 +107,31 @@ void Time::display(std::ostream &out) {
 	std::cout << m_hours << "H " << m_min << "Min " << m_sec << " Sec" << std::endl;
 }
 
+
+
+// Operator +
+Time operator+(Time const& x, Time const& y)
+{
+	 Time X(x);
+	 X += y;
+	 return X;
+}
+// Operator -
+Time operator-(Time const& x, Time const& y)
+{
+	Time X(x);
+	X -= y;
+	return X;
+}
+
+std::ostream& operator<<(std::ostream& flux, Time time) {
+	time.display(flux);
+	return flux;
+}
+
+
+
+
 // Operator +=
 Time Time::operator+=(Time const& x)
 {
@@ -126,57 +151,23 @@ Time Time::operator+=(Time const& x)
 	return *this;
 
 }
-
-// Operator +
-Time operator+(Time const& x, Time const& y)
-{
-	 Time X(x);
-	 X += y;
-	 return X;
-}
-
-std::ostream& operator<<(std::ostream& flux, Time time) {
-	time.display(flux);
-	return flux;
-}
-
-
-
-
-/*
 // Operator -=
 Time Time::operator-=(Time const& x)
 {
-	return Time();
+	// Sec
+	m_sec -= x.m_sec;
+	m_min -= m_sec / 60;
+	m_sec %= 60;
+
+	// Min
+	m_min -= x.m_min;
+	m_hours -= m_min / 60;
+	m_min %= 60;
+
+	// Hours
+	m_hours -= x.m_hours;
+
+	return *this;
 }
 
-// Operator *=
-Time Time::operator*=(Time const& x)
-{
-	return Time();
-}
-
-// Operator /=
-Time Time::operator/=(Time const& x)
-{
-	return Time();
-}
-
-
-
-Time Time::operator-(Time const& x)
-{
-	return Time();
-}
-
-Time Time::operator*(Time const& x)
-{
-	return Time();
-}
-
-Time Time::operator/(Time const& x)
-{
-	return Time();
-}
-*/
 
